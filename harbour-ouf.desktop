@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-ouf
+Exec=harbour-ouf
+
+Name=OUF
+Name[fi]=OUF
+
+[X-Sailjail]
+# Replace with your organization as a reverse domain name
+OrganizationName=org.sruusk
+# ApplicationName does not have to be identical to Name
+ApplicationName=OUF
+# Add the required permissions here
+Permissions=Internet
