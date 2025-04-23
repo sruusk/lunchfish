@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
     // Show the application window
     view->show();
 
+    app->setApplicationVersion(QStringLiteral(APP_VERSION));
     app->setOrganizationName(QStringLiteral("org.sruusk"));
     app->setApplicationName(QStringLiteral("OUF"));
 

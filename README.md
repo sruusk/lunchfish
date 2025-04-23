@@ -18,3 +18,4 @@ This Sailfish OS project proudly displays Oulu University restaurant menus, beca
 - `qml/pages/AboutPage.qml`: A humble brag about the app's existence, or a desperate plea for validation.
 
 
+<img src="/screenshot_1.png" width="300" alt="App Screenshot">

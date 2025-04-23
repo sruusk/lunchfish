@@ -43,3 +43,6 @@ TRANSLATIONS += translations/harbour-ouf-fi.ts
 
 HEADERS += \
     src/restaurantmodel.h
+
+VERSION = 1.0.0
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
