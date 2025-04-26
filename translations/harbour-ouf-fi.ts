@@ -64,7 +64,7 @@
     </message>
     <message>
         <source>Oulu University Food</source>
-        <translation>Oulun Ylipisto Lounaat</translation>
+        <translation>Oulun Yliopisto Lounaat</translation>
     </message>
     <message>
         <source>Restaurants</source>
