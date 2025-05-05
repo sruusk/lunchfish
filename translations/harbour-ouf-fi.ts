@@ -13,27 +13,27 @@
     </message>
     <message>
         <source>Vegan (VEG)</source>
-        <translation>Vegaani</translation>
+        <translation>Vegaani (VEG)</translation>
     </message>
     <message>
         <source>Egg-free (Mu)</source>
-        <translation>Munaton</translation>
+        <translation>Munaton (Mu)</translation>
     </message>
     <message>
         <source>Milk free (M)</source>
-        <translation>Maidoton</translation>
+        <translation>Maidoton (M)</translation>
     </message>
     <message>
         <source>Gluten free (G)</source>
-        <translation>Gluteeniton</translation>
+        <translation>Gluteeniton (G)</translation>
     </message>
     <message>
         <source>Lactose free (L)</source>
-        <translation>Laktoositon</translation>
+        <translation>Laktoositon (L)</translation>
     </message>
     <message>
         <source>Recommended (*)</source>
-        <translation>Suositusten mukainen</translation>
+        <translation>Suositusten mukainen (*)</translation>
     </message>
     <message>
         <source>Application Information</source>
@@ -64,11 +64,17 @@
     </message>
     <message>
         <source>Oulu University Food</source>
-        <translation>Oulun Ylipisto Lounaat</translation>
+        <translation>Oulun Yliopisto Lounaat</translation>
     </message>
     <message>
         <source>Restaurants</source>
         <translation>Ravintolat</translation>
+    </message>
+    <message>
+        <source>Error loading menus: 
+%1</source>
+        <translation>Ruokalistoja ei voitu ladata:
+%1</translation>
     </message>
 </context>
 <context>

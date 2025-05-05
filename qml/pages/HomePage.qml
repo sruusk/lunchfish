@@ -50,7 +50,13 @@ Page {
                 size: BusyIndicatorSize.Large
                 anchors.horizontalCenter: parent.horizontalCenter
                 running: restaurantModel.count === 0
-                visible: restaurantModel.count === 0
+                visible: restaurantModel.count === 0 && restaurantModel.networkError.length === 0
+            }
+            Label {
+                x: Theme.horizontalPageMargin
+                text: qsTr("Error loading menus: \n%1").arg(restaurantModel.networkError)
+                color: Theme.errorColor
+                visible: restaurantModel.networkError.length >= 2
             }
             SilicaListView {
                 width: page.width

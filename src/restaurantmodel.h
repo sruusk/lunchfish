@@ -64,9 +64,13 @@ public:
     Q_INVOKABLE QDate getSelectedDate() const;
     Q_PROPERTY(QDate selectedDate READ getSelectedDate WRITE setSelectedDate NOTIFY selectedDateChanged)
 
+    Q_INVOKABLE QString getNetworkError() const;
+    Q_PROPERTY(QString networkError READ getNetworkError NOTIFY networkError)
+
 signals:
     void restaurantsLoaded();
     void selectedDateChanged();
+    void networkError();
 
 private slots:
     void onNetworkReply(QNetworkReply *reply);
@@ -75,6 +79,7 @@ private:
     QVector<Restaurant> m_restaurants;
     QNetworkAccessManager *m_networkManager;
     QDate m_selectedDate;
+    QString m_networkErrorString;
 };
 
 #endif // RESTAURANTMODEL_H

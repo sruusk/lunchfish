@@ -70,6 +70,11 @@
         <source>Restaurants</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Error loading menus: 
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>IngredientsPage</name>

@@ -7,6 +7,7 @@ RestaurantModel::RestaurantModel(QObject *parent) : QAbstractListModel(parent)
             this, [this](QNetworkReply *reply) { this->onNetworkReply(reply); });
 
     m_selectedDate = QDate::currentDate();
+    m_networkErrorString = nullptr;
 }
 
 int RestaurantModel::rowCount(const QModelIndex &parent) const
@@ -52,8 +53,10 @@ void RestaurantModel::fetchRestaurants()
     // Reset restaurant list to trigger loader
     m_restaurants.clear();
     emit restaurantsLoaded();
+    m_networkErrorString = nullptr;
+    emit networkError();
 
-    QUrl url("https://ouf.fi/api/menu?campus=Linnanmaa&city=Oulu"); // Replace with actual API URL
+    QUrl url("https://ouf.fi/api/menu?campus=Linnanmaa&city=Oulu");
     QNetworkRequest request(url);
     m_networkManager->get(request);
 }
@@ -100,10 +103,20 @@ QDate RestaurantModel::getSelectedDate() const
     return m_selectedDate;
 }
 
+QString RestaurantModel::getNetworkError() const
+{
+    if(m_networkErrorString == nullptr)
+        return "";
+    return m_networkErrorString;
+}
+
 void RestaurantModel::onNetworkReply(QNetworkReply *reply)
 {
     if (reply->error()) {
-        qDebug() << "Network error:" << reply->errorString();
+        const auto err = reply->errorString();
+        m_networkErrorString = err;
+        emit networkError();
+        qDebug() << "Network error:" << err;
         reply->deleteLater();
         return;
     }
